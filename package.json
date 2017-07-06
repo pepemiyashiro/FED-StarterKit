@@ -1,0 +1,28 @@
+{
+  "name": "fed-starter-kit",
+  "version": "1.0.0",
+  "description": "### On Progress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepemiyashiro/FED-StarterKit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepemiyashiro/FED-StarterKit/issues"
+  },
+  "homepage": "https://github.com/pepemiyashiro/FED-StarterKit#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.2"
+  }
+}

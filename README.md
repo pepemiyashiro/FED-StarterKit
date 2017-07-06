@@ -3,4 +3,4 @@
 
 ### On Progress.
 
-This will use Webpack v3 and Gulp 4.
+This will use Webpack 3 and Gulp 4.
