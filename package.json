@@ -11,6 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/pepemiyashiro/FED-StarterKit.git"
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "babelrc": false
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
