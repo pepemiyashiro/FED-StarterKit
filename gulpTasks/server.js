@@ -3,7 +3,7 @@ import browserSync from 'browser-sync';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
-import { config as webpackConfig } from './webpack';
+import { webpackConfig } from './webpackConfig';
 import { styles } from './styles';
 
 const bundler = webpack(webpackConfig);
