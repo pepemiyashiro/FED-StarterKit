@@ -6,7 +6,7 @@ import { server } from './server';
 import { watcher } from './watch';
 import { html } from './html';
 
-export const dev = gulp.series(styles, html, gulp.parallel(server, watcher));
+export const dev = gulp.series(styles, html, scripts, gulp.parallel(server, watcher));
 export const build = gulp.series(scripts);
 
 export default dev;
