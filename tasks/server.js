@@ -1,15 +1,14 @@
-import gulp from 'gulp'
-import Browser from 'browser-sync'
-import webpack from 'webpack'
-import webpackDevMiddleware from 'webpack-dev-middleware'
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
 
-import { config as webpackConfig } from './webpack'
+import { config as webpackConfig } from './webpack';
 
-const browser = Browser.create()
-const bundler = webpack(webpackConfig)
+const browser = browserSync.create();
+const bundler = webpack(webpackConfig);
 
 export function server() {
-
   let config = {
     server: 'dist',
     open: false,
@@ -17,8 +16,6 @@ export function server() {
       webpackDevMiddleware(bundler, { /* options */ })
     ],
   }
-
-  browser.init(config)
-
-  gulp.watch('source/*.js').on('change', () => browser.reload())
+  browser.init(config);
+  gulp.watch('source/*.js').on('change', () => browser.reload());
 }
