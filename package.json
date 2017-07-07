@@ -4,8 +4,8 @@
   "description": "### On Progress.",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp --require babel-register --gulpfile tasks",
-    "build": "NODE_ENV=production gulp build --require babel-register --gulpfile tasks"
+    "dev": "gulp --require babel-register --gulpfile gulpTasks",
+    "build": "NODE_ENV=production gulp build --require babel-register --gulpfile gulpTasks"
   },
   "repository": {
     "type": "git",

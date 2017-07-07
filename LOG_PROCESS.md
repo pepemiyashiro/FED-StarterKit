@@ -12,3 +12,8 @@ Also we will use Github integrated with Slack to follow the collaborative proces
 ## Adding tasks
 Following the [guide to combine webpack and gulp](https://css-tricks.com/combine-webpack-gulp-4/), we have setted up the tasks.
 We are also using Javascript ES6 for the tasks configuration. We think that will make easy to create a base configuration along the tasks.
+
+# Adding the Style task
+Well since there were some changes in the approach about building the starter kit with es6/gulp/webpack/browser-sync it took us a while to implement it, we decided to have 2 separate watchers: webpack watch and the gulp watch for all non javascript task.
+
+The next task is to start creating a config file for the task
