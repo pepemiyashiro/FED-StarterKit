@@ -4,18 +4,23 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import { config as webpackConfig } from './webpack';
+import { styles } from './styles';
 
-const browser = browserSync.create();
 const bundler = webpack(webpackConfig);
+const browser = browserSync.create();
 
-export function server() {
+const server = _=> {
   let config = {
     server: 'dist',
     open: false,
     middleware: [
-      webpackDevMiddleware(bundler, { /* options */ })
-    ],
+      webpackDevMiddleware(bundler, { 
+        /* options */ 
+      })
+    ]
   }
   browser.init(config);
-  gulp.watch('source/*.js').on('change', () => browser.reload());
+  gulp.watch('source/*.js').on('change', () => browser.reload())
 }
+
+export { server, browser }
