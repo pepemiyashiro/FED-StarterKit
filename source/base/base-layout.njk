@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FED StarterKit</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <header>{% block header %}{% endblock %}</header>
@@ -12,5 +13,9 @@
     {% block content %}{% endblock %}
   </section>
   <footer>{% block footer %}{% endblock %}</footer>
+
+  <script src="js/global.js"></script>
+  {# Additional Scripts Goes Here #}
+  {% block bodyScripts %}{% endblock %}
 </body>
 </html>
