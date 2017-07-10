@@ -1,8 +1,7 @@
 import gulp from 'gulp';
 import nunjucks from 'gulp-nunjucks-render';
 
-import { pathTo } from './config';
-
+import { pathTo } from '../siteconfig';
 import { browser } from './server';
 
 const html = _=> gulp.src(`${pathTo.src}/pages/**/*.njk`)
