@@ -1,8 +1,7 @@
 import path from 'path';
 import process from 'process';
 
-import { pathTo } from './config';
-import { webpackEntries } from '../siteconfig';
+import { webpackEntries, pathTo } from '../siteconfig';
 
 const resolve = path.resolve;
 const isProduction = (process.env.NODE_ENV === 'production');
