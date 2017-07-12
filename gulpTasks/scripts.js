@@ -30,7 +30,6 @@ const injectScripts = _=> {
 
 
 const scripts = _=> {
-  console.log(' Running scripts ');
   return new Promise(resolve => webpack(webpackConfig, (err, stats) => {
     if (err) console.log('Webpack', err);
     console.log(stats.toString({ /* stats options */ }))
