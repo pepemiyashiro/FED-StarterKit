@@ -12,7 +12,7 @@ const webpackConfig = {
   output: {
     // path: resolve(__dirname, '..', pathTo.dist)
     // path : String - Target directory for output files
-    path: resolve(__dirname, '..', `${pathTo.dist}/js`),
+    path: resolve(__dirname, '..', `${pathTo.distJs}`),
 
     // publicPath: String - the url to the output directory resolved relative to the HTML page
     publicPath: '/js/',

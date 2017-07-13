@@ -4,31 +4,32 @@ import path from 'path';
  * Define Source and Dist paths
  */
 const pathTo = {
+  components: 'components',
+  dist: 'dist',
+  distCss: `dist/css`,
+  distJs: `dist/js`,
   src: 'source',
-  dist: 'dist'
+  srcSass: 'source/main.scss',
+  srcJs: 'source/main.js'
 }
 
 
 /**
  * Webpack Configurations
  */
-
-/**
- * jsFile
- * Resolve the path to the js file inside the source folder.
- * @param {String} filePath 
- */
-const jsFile = filePath => path.resolve(__dirname, pathTo.src, filePath);
+const webpackEntries = {
+  // js:components
+  banner: '../source/components/banner/banner.js',
+  modal: '../source/components/modal/modal.js'
+  // endjs:components
+}
 
 /**
  * Define the files to be compiled by webpack.
  * ex. 
- * [nameToBeDistributed] : jsFile('filePath')
+ * nameToBeDistributed: 'filePath'
  */
-const webpackEntries = {
-  global: jsFile('main.js'),
-  banner: jsFile('components/banner/banner.js')
-}
 
+webpackEntries.global = '../source/main.js';
 
 export { webpackEntries, pathTo }

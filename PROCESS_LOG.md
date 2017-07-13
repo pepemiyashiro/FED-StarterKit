@@ -17,3 +17,6 @@ We are also using Javascript ES6 for the tasks configuration. We think that will
 Well since there were some changes in the approach about building the starter kit with es6/gulp/webpack/browser-sync it took us a while to implement it, we decided to have 2 separate watchers: webpack watch and the gulp watch for all non javascript task.
 
 The next task is to start creating a config file for the task
+
+# Automation
+We had an idea to make easy to create a new component with out having to make imports satatements to the main sass, and to the webpack entries. So we started trying to inject the files in the components folder using the gulp-inject plugin.

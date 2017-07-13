@@ -1,1 +1,1 @@
-console.log('Main JS initialized');
+console.log('Main JS initialized!');

@@ -4,23 +4,26 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 import { webpackConfig } from './webpackConfig';
-import { styles } from './styles';
+import { pathTo } from '../siteconfig';
+
 
 const bundler = webpack(webpackConfig);
+
 const browser = browserSync.create();
 
 const server = _=> {
-  let config = {
+  let browserSyncConfig = {
     server: 'dist',
     open: false,
     middleware: [
       webpackDevMiddleware(bundler, { 
-        /* options */ 
+        publicPath: webpackConfig.output.publicPath,
+        stats: { colors: true }
       })
     ]
   }
-  browser.init(config);
-  gulp.watch('source/*.js').on('change', () => browser.reload())
+  browser.init(browserSyncConfig);
 }
+
 
 export { server, browser }
