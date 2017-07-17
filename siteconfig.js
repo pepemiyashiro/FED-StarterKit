@@ -17,19 +17,20 @@ const pathTo = {
 /**
  * Webpack Configurations
  */
-const webpackEntries = {
+
+let webpackInjectedEntries = {
   // js:components
   banner: '../source/components/banner/banner.js',
+  header: '../source/components/header/header.js',
+  bannerSmall: '../source/components/bannerSmall/bannerSmall.js',
   modal: '../source/components/modal/modal.js'
   // endjs:components
 }
 
-/**
- * Define the files to be compiled by webpack.
- * ex. 
- * nameToBeDistributed: 'filePath'
- */
+let webpackGlobalEntries = {
+  global: '../source/main.js'
+}
 
-webpackEntries.global = '../source/main.js';
+let webpackEntries = Object.assign(webpackGlobalEntries, webpackInjectedEntries);
 
 export { webpackEntries, pathTo }
