@@ -8,6 +8,7 @@ const isProduction = (process.env.NODE_ENV === 'production');
 
 // NOTE: Config must be in a separate file
 const webpackConfig = {
+  devtool: 'source-map',
   entry: webpackEntries,
   output: {
     // path: resolve(__dirname, '..', pathTo.dist)
