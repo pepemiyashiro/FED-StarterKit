@@ -21,14 +21,14 @@ const pathTo = {
 /**
  * Injected components through the script.js task
  */
-const webpackInjectedComponents = {
+const webpackInjectedComponents = ({}, {
   // js:components
   banner: '../source/components/banner/banner.js',
   bannerSmall: '../source/components/bannerSmall/bannerSmall.js',
   header: '../source/components/header/header.js',
   modal: '../source/components/modal/modal.js'
   // endjs:components
-}
+})
 
 /**
  * Scripts manually added
