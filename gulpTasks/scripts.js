@@ -16,7 +16,7 @@ const scriptTemplate = (file, index, length) => {
 
 const injectScripts = _=> {
   return gulp.src(path.resolve(__dirname, '..', 'siteconfig.js') )
-    .pipe(inject(gulp.src(`${pathTo.src}/${pathTo.components}/**/*.js`, {read: false}), {
+    .pipe(inject(gulp.src(`${pathTo.src}/${pathTo.components}/**/*.js`), {
       transform: function (filepath, file, index, length) {
         return scriptTemplate(file, index, length);
       },

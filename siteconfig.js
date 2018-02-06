@@ -18,19 +18,25 @@ const pathTo = {
  * Webpack Configurations
  */
 
-let webpackInjectedEntries = {
+/**
+ * Injected components through the script.js task
+ */
+const webpackInjectedComponents = {
   // js:components
   banner: '../source/components/banner/banner.js',
-  header: '../source/components/header/header.js',
   bannerSmall: '../source/components/bannerSmall/bannerSmall.js',
+  header: '../source/components/header/header.js',
   modal: '../source/components/modal/modal.js'
   // endjs:components
 }
 
-let webpackGlobalEntries = {
+/**
+ * Scripts manually added
+ */
+const webpackGlobalEntries = {
   global: '../source/main.js'
 }
 
-let webpackEntries = Object.assign(webpackGlobalEntries, webpackInjectedEntries);
+const webpackEntries = Object.assign({}, webpackGlobalEntries, webpackInjectedComponents);
 
 export { webpackEntries, pathTo }

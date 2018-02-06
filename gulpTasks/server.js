@@ -20,7 +20,8 @@ const server = _=> {
         publicPath: webpackConfig.output.publicPath,
         stats: { colors: true }
       })
-    ]
+    ],
+    injectChanges: true
   }
   browser.init(browserSyncConfig);
 }
