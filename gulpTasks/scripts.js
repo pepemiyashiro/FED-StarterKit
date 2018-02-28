@@ -10,6 +10,7 @@ import { webpackConfig } from './webpackConfig';
 
 const scriptTemplate = (file, index, length) => {  
   const pathToFile = `../${pathTo.src}/${pathTo.components}/${file.relative}`;
+  console.log(pathToFile, file, index, length );
   return (index >= (length - 1)) ? `${file.stem}: '${pathToFile}'`
                                  : `${file.stem}: '${pathToFile}',`;
 }

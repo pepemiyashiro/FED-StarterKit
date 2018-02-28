@@ -24,9 +24,10 @@ const pathTo = {
 const webpackInjectedComponents = ({}, {
   // js:components
   banner: '../source/components/banner/banner.js',
-  bannerSmall: '../source/components/bannerSmall/bannerSmall.js',
   header: '../source/components/header/header.js',
-  modal: '../source/components/modal/modal.js'
+  bannerSmall: '../source/components/bannerSmall/bannerSmall.js',
+  modal: '../source/components/modal/modal.js',
+  test: '../source/components/test/test.js'
   // endjs:components
 })
 
