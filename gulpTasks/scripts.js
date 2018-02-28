@@ -10,7 +10,6 @@ import { webpackConfig } from './webpackConfig';
 
 const scriptTemplate = (file, index, length) => {  
   const pathToFile = `../${pathTo.src}/${pathTo.components}/${file.relative}`;
-  console.log(pathToFile, file, index, length );
   return (index >= (length - 1)) ? `${file.stem}: '${pathToFile}'`
                                  : `${file.stem}: '${pathToFile}',`;
 }
@@ -32,8 +31,8 @@ const injectScripts = _=> {
 
 const scripts = _=> {
   return new Promise(resolve => webpack(webpackConfig, (err, stats) => {
-    if (err) console.log('Webpack', err);
-    console.log(stats.toString({ /* stats options */ }))
+    if (err) console.log('Webpack ERR: ', err);
+      console.log(stats.toString({ /* stats options */ }))
     resolve()
   }))
 }

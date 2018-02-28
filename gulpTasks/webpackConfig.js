@@ -9,7 +9,7 @@ const isProduction = (process.env.NODE_ENV === 'production');
 
 // NOTE: Config must be in a separate file
 const webpackConfig = {
-  devtool: 'source-map',
+  devtool: isProduction ? false : 'source-maps',
   entry: webpackEntries,
   output: {
     // path: resolve(__dirname, '..', pathTo.dist)
@@ -22,8 +22,7 @@ const webpackConfig = {
     // filename: String - the filename template for entry chunks
     filename: '[name].js'
   },
-  context: resolve(__dirname, '..', pathTo.dist),
-  plugins: isProduction ? [new webpack.optimize.UglifyJsPlugin()] : []
+  context: resolve(__dirname, '..', pathTo.dist)
 }
 
 export { webpackConfig }
